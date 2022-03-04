@@ -45,5 +45,9 @@ las cosas de la manera correcta, y a menudo se lo impiden.
 - Residan en zonas urbanas
 
 ## Wireframes
+![Ux 1](./images/Wireframe-1.jpg)
+![Ux 2](./images/Wireframe-2.jpg)
 
 ## Diseño UI
+![Ui 1](./images/UI-1.jpg)
+![Ui 2](./images/UI-2.jpg)
