@@ -1,3 +1,6 @@
 [submodule "FrontEnd-Mission/03"]
-	path = FrontEnd-Mission/03
+	path = FrontEnd-Mission/03-CSS
+	url = https://github.com/jhreyess/vaccination-campaign-concept
+[submodule ".\\FrontEnd-Mission\\03-CSS"]
+	path = .\\FrontEnd-Mission\\03-CSS
 	url = https://github.com/jhreyess/vaccination-campaign-concept
