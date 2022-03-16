@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --white-transparent: rgba(255, 255, 255, 0.9);
+    --white: #ffffff;
+    --footer-bg-color: #eef3ff;
+    --blue-gradient: linear-gradient(90deg, hsl(228, 60%, 53%) 0%, hsl(228, 68%, 45%) 100%);
+    --blue: #2a4ac8;
+    --light-blue: #f1f5ff;
+    --blue-shadow: rgba(42, 74, 200, 0.5);
+    --dark-blue: #1f3e72;
+    --gray: #6d7b93;
+    --light-gray: #f4f6fb; 
+    --extra-light-gray: #fafaff;
+    --gold: #ffd012;
+    --gold-shadow: rgba(255, 208, 18, 0.9);
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+    font-size: 1.5em;
+    font-family: 'Montserrat', 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    color: var(--dark-blue);
+}
+
+h4, h5, h6{
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+p, a{
+    margin: 0;
+    color: var(--gray);
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.container{
+    margin: 0 7em;
+}
+.container-padding{
+    padding: 0 7em;
+}
+.container-padding-left{
+    padding: 0 0 0 7em;
+}
+.container-padding-right{
+    padding: 0 7em 0 0;
+}
+
+/* HEADER */
+
+
+header{
+    position: absolute;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+span{
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--blue);
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+header nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline;
+    margin: 0 1.25em;
+}
+
+header nav ul li a{
+    font-weight: 600;
+}
+
+header nav ul li:first-child{
+    margin-left: 0;
+}
+header nav ul li:last-child{
+    margin-right: 0;
+}
+
+header::before{
+    content: "";
+    top: 100%;
+    position: absolute;
+    background-color: var(--light-gray);
+    width: 10em;
+    height: 5em;
+    transform: translateX(-50%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    z-index: -2;
+}
+
+
+/* HERO */
+
+main{
+    height: 55em;
+    position: relative;
+    display: flex;
+}
+
+main .left{
+    flex-basis: 50%;
+}
+
+.main-content{
+    position: relative;
+    top: 20%;
+    box-sizing: border-box;
+}
+
+.main-content h1{
+    font-size: 3.25em;
+}
+
+.paragraph{
+    margin-bottom: 3em;
+    line-height: 1.75em;
+}
+
+main .badges{
+    display: flex;
+    gap: 3em;
+    margin-top: 1em;
+}
+
+.badge {
+    color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+}
+
+.badge h1,
+.badge h2,
+.badge h3,
+.badge h4,
+.badge h5,
+.badge h6,
+.badge p{
+    color: var(--dark-blue);
+    margin: 0;
+    display: inline;
+}
+
+main .badges::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 7.5em;
+    height: 15em;
+    transform: translateY(-50%);
+    background-color: var(--light-gray);
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    z-index: -2;
+}
+
+main .right{
+    background: url("../images/female-nurse.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-basis: 50%;
+}
+
+
+.main-banner {
+    position: absolute;
+    bottom: 3%;
+}
+
+.main-banner .blur-card {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    margin-top: 1.5em;
+    box-shadow: 0 32px 50px -12px rgb(42 74 200 / 25%);
+    border-radius: 8px;
+    gap: 2.25em;
+    white-space: nowrap;
+}
+
+.main-banner .blur-card p,
+.main-banner .blur-card h2{
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.main-banner .banner-info{
+    display: flex;
+    flex-grow: 1;
+}
+
+/* SPONSORS */
+
+.sponsors-wrapper{
+    display: flex;
+    align-items: center;
+    padding: 5em 0;
+    box-sizing: border-box;
+    gap: 5%;
+}
+
+.sponsors .img-wrapper{
+    flex-basis: 25%;
+}
+
+.img-wrapper img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* SECTIONS  */
+
+section{
+    margin-bottom: 4em;
+}
+
+.section-info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.section-info.left{
+    column-gap: 6em;
+}
+
+.section-info.right{
+    column-gap: 2em;
+}
+
+.section-info .title{
+    position: relative;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+}
+.section-info .title h1{
+    margin: 0;
+}
+
+.section-info.left .title{
+    grid-column: 1 / 3;
+}
+.section-info.right .title{
+    grid-column: 2;
+}
+.section-info.right .paragraph{
+    grid-column: 2;
+}
+
+.section-info.left::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: translateY(-50%);
+    background-color: var(--light-gray);
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    width: 160px;
+    height: 320px;
+    z-index: -2;
+}
+
+.section-info.left::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 25%;
+    background-color: var(--extra-light-gray);
+    width: 50%;
+    height: 5px;
+    z-index: -1;
+}
+
+.section-info.right::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: var(--light-gray);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    width: 7.5em;
+    height: 15em;
+    z-index: -2;
+}
+
+.section-info.right::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: var(--extra-light-gray);
+    width: 42%;
+    height: 5px;
+    z-index: -1;
+}
+
+.section-grid .section-info.left::before,
+.section-grid .section-info.right::before,
+.section-grid .section-info.left::after,
+.section-grid .section-info.right::after{
+    top: 10%;
+}
+
+.section-image.left{
+    background: url("../images/front-view-young-woman.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1;
+    grid-row: 2 / 4;
+    height: 100%;
+}
+
+.section-image.right{
+    background: url("../images/portrait-man.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column: 2;
+    grid-row: 2 / 4;
+    height: 100%;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+.card-list.vertical{
+    grid-column: 2;
+    flex-direction: column;
+    padding: 0 2em;
+}
+.card-list.grid{
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--light-blue);
+}
+footer > .footer-content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+.footer-upper h2{
+    margin: 0;
+}
+
+footer p,
+footer a{
+    font-size: 0.75em;
+}
+
+.footer-upper p,
+.footer-upper a{
+    margin-top: 1em;
+}
+
+.footer-upper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5em;
+}
+
+.footer-upper > div:first-child{
+    flex-basis: 15%;
+}
+
+.footer-upper > div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+}
+
+footer .section{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom p{
+    display: inline;
+}
+
+.footer-bottom div p:last-child{
+    margin-left: 1.5em;
+}
+
+/* MISCELLANEOUS */
+
+[class^="btn-"], [class*=" btn-"]{
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    font-family: inherit;
+    font-weight: 600;
+    border: 0;
+    outline: none;
+    padding: 1em 2em;
+    border-radius: 0.3em;
+}
+
+.btn-filled {
+    color: var(--white);
+    background: var(--blue-gradient);
+    transition: box-shadow 200ms;
+}
+
+.btn-filled:hover{
+    cursor: pointer;
+    box-shadow: 0 10px 24px -4px rgb(42 74 200 / 45%)
+}
+
+.btn-unfilled{
+    background-color: var(--light-blue);
+    color: var(--blue)
+}
+
+[class^="icon-"], [class*=" icon-"]{
+    display: inline-grid;
+    align-items: center;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    margin-right: 0.5em;
+    text-align: center;
+    padding: 0.25em;
+    width: 1em;
+    height: 1em;
+}
+
+[class^="icon-"] i, [class*=" icon-"] i{
+    font-size: 0.75em;
+}
+
+.icon-large{
+    font-size: 2em;
+}
+
+.icon-blue-flat{
+    color: var(--blue); 
+    background-color: var(--light-blue);
+}
+
+.icon-blue {
+    color: var(--blue); 
+    background-color: rgba(42, 74, 200, 0.15);
+    box-shadow: 0px 12px 32px -8px var(--blue-shadow);
+}
+
+.icon-gold {
+    color: var(--gold); 
+    background-color: rgba(255, 208, 20, 0.15);
+    box-shadow: 0px 16px 32px -8px var(--gold-shadow);
+}
+
+.card{
+    flex: 1 0 0;
+    padding: 2em;
+    gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px solid var(--light-gray);
+    border-radius: 16px;
+    background-color: var(--white);
+}
+
+.card.vertical{
+    flex-direction: column;
+}
+
+.card.dropdown{
+    padding: 0.75em 1.25em;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card.squared .card-text{
+    display: inline-block;
+}
+
+.card .card-title{
+    font-weight: 600;
+    margin: 0;
+}
+
+.card.dropdown .card-title{
+    font-weight: 500;
+    display: inline;
+}
+
+.card .card-paragraph{
+    margin-bottom: 0;
+    font-size: 0.75em;
+}
+
+.blur-card{
+    background-color: var(--white-transparent);
+    border: 4px solid var(--white);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 1620px) {
+    body{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    header nav{
+        flex-direction: column;
+    } 
+    .container{
+        margin: 0 4em;
+    }
+    .container-padding{
+        padding: 0 4em;
+    }
+    .container-padding-left{
+        padding: 0 0 0 4em;
+    }
+    .container-padding-right{
+        padding: 0 4em 0 0;
+    }
+}
+
+@media screen and (max-width: 920px){
+    body{
+        font-size: 14px;
+    }
+    header{
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        z-index: unset
+    }
+    main{
+        height: auto;
+        flex-direction: column;
+        gap: 5em;
+    }
+    .main-banner{
+        position: relative;
+    }
+    .main-banner .blur-card{
+        flex-wrap: wrap;
+    }
+    main .right{
+        display: none;
+    }
+    main .left{
+        flex-basis: 100%;
+    }
+    .main-content{
+        top: 28%;
+    }
+}
+
+@media screen and (max-width: 620px){
+    .container-padding-left,
+    .container-padding-right{
+        padding: 0 4em;
+    }
+    .section-info{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
